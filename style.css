@@ -1,0 +1,25 @@
+body {
+    background-color: bisque;
+    background-image: url(spider.webp);
+    /* background-position: center; */
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border-radius: 0%;
+
+}
+
+
+#container {
+    color: rgba(255, 255, 255, 0);
+    height: 55px;
+    width: 45px;
+    font-size: 5px;
+    border: 2px;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-color: red;
+
+}

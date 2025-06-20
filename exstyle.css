@@ -1,0 +1,17 @@
+        table, th, td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            
+        }
+        th, td{
+            padding: 8px;
+            text-align: center;
+        }
+        h1{
+            text-align: center; 
+             color: black;
+        }
+       table{
+        background-color: antiquewhite;
+       }
+

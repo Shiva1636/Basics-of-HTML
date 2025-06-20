@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>FORMS</title>
+</head>
+
+<body>
+
+    <center>
+        <form>
+            <fieldset>
+                <h1>User personal Information</h1>
+                <label for="name">Enter your Full name: </label>
+                <input type="text" id="name" placeholder="Enter Your Name" required />
+                <br>
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" placeholder="Enter Your Email" required />
+                <br>
+                <label for="password">Enter your password:</label>
+                <input type="password" id="password" placeholder="Enter Your password" required />
+                <br>
+                <label for="confirmpassword">Confim your password:</label>
+                <input type="password" id="confirmpassword" placeholder="Confim Your Password" required />
+                <br>
+                <label for="phone">Enter your phone number: </label>
+                <input type="tel" id="phone" pattern="[0-9]{10}" placeholder="Enter Your Mobile Number" required />
+                <br><br>
+                <!-- <center>
+                <button type="submit" value="submit">Submit</button>
+            </center> -->
+
+
+                <label>Enter your gender: </label>
+                <div class="gender-group">
+                    <input type="radio" name="gender" value="male" id="male" required />
+                    <label for="male">male</label>
+                    <input type="radio" name="gender" value="female" id="female" required />
+                    <label for="female">female</label>
+                    <input type="radio" name="gender" value="other" id="other" required />
+                    <label for="other">other</label>
+                    <br>
+                    <label for="date of birth">D.O.B</label>
+                    <input type="date" name="D.O.birth" value="date of birth" id="d.o.b" required />
+                    <label for="text area">Enter your Address</label>
+                    <textarea id="Address" name="Address" placeholder="Enter Your Address" required></textarea>
+                    <br><br>
+
+                </div>
+                <div>
+                    <label for="country">Select your country</label>
+                    <select id="country" required>
+                        <option value="" disabled selected>Select Your Country</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Australia">Australia</option>
+                        <br><br>
+                    </select>
+                </div>
+                <br><br><br>
+                <center>
+                    <button type="submit" value="submit">Submit</button>
+                </center>
+                <br><br>
+            </fieldset>
+        </form>
+    </center>
+
+
+    <!-- <style>
+        /* form {
+        width: 400px;
+        margin: 20px auto;
+    } */
+        /* 
+    fieldset {
+        padding: 20px;
+    } */
+
+        label {
+            display: inline-block;
+            width: 180px;
+            margin-bottom: 10px;
+        }
+
+        /* input {
+                width: 180px;
+                padding: 5px;
+                margin-bottom: 10px;
+            } */
+
+        h1 {
+            text-align: center;
+            color: rgb(228, 14, 14)
+        }
+
+        button {
+            text-align: center;
+
+        }
+
+        fieldset {
+            background-color: blanchedalmond;
+        }
+    </style> -->
+
+</body>
+
+</html>
