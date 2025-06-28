@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="abc" style="width: 100px; height: 100px; background-color: lightblue;"></div>
+    <br><br>
+    <p id="para">Hello Aditya!</p>
+    <button id="clickMe">Click Me</button>
+
+    <script>
+        let a = document.getElementById("abc");
+        a.addEventListener("mouseenter", function () {
+            a.style.backgroundColor = "lightcoral";
+        });
+
+        a.addEventListener("mouseout", function () {
+            a.style.backgroundColor = "#00acc1";
+        });
+        let b = document.getElementById("para");
+
+          b.addEventListener("mouseenter", function () {
+              b.style.color = "red";
+            //   b.innerHTML = "Hello Shiva How Are You!";
+            //   document.body.appendChild(b);
+              // b.style.backgroundColor = "burlywood";
+              b.style.textAlign = "center";
+          });
+
+        b.addEventListener("mouseout", function () {
+            b.style.color = "green";
+            // b.innerHTML = "Hello Aditya!";
+            //   document.body.appendChild(b);
+            // b.style.backgroundColor = "burlywood";
+            b.style.textAlign = "left";
+        });
+
+
+
+        // document.getElementById("clickMe").addEventListener("dblclick", function() {
+        //     alert("Button is clicked");
+        //     let a = document.createElement("p");
+        //     a.innerHTML = "Hello Sonic";
+        //     a.style.textAlign = "center";
+        //     a.style.color = "black";
+        //     a.style.backgroundColor = "gray";
+        //     document.body.appendChild(a);
+        //     document.body.style.backgroundColor = "burlywood";
+        // });
+    </script>
+</body>
+
+</html>
