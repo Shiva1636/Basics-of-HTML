@@ -1,0 +1,40 @@
+fieldset {
+    text-align: center;
+    border: 2 px solid rgb(137, 106, 106);
+    border-radius: 38px;
+    margin: 5px;
+    padding: 55px;
+}
+
+body {
+    background: rgb(242, 230, 118);
+}
+
+input {
+    width: 180px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(228, 14, 14);
+}
+
+button {
+    text-align: center;
+    width: 85px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+fieldset {
+    background-color: blanchedalmond;
+}
+
+form {
+    width: 400px;
+    margin: 20px ;
+    align-items: center;
+}
