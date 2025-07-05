@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men - Ajio Shopping</title>
+    <link rel="stylesheet" href="ajio.css">
+    <style>
+        .products-container {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2rem 0;
+        }
+        .btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<!-- <body>
+    <section id="header">
+        <div class="header">
+            <div style="font-size: 25px; color: red;">AJIO</div>
+            <nav>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="men.html">Men</a></li>
+                    <li><a href="women.html">Women</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section> -->
+        <section id="header">
+        <div class="header">
+            <div style="font-size: 25px; color: red;"><a href="ajio.html">AJIO</a></div>
+            <nav>
+                <ul id="navbar">
+                    <li><a href="ajio.html">Home</a></li>
+                    <li><a href="men1.html">Men</a></li>
+                    <li><a href="women1.html">Women</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="login.html">Sign In</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <div class="products-container" id="men-products">
+        <!-- Products will be rendered here by JS -->
+    </div>
+    <script>
+        const menProducts = [
+            {
+                name: "Men's Black Jacket",
+                price: 1299,
+                img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSfQ97TORXZdX7qnQrSc95PuboM3be9OskVLyAvmpgsrjOFSfxVPNLrSqfrUaSL28ekw6TWTzH510lVk1Re7b4T7RxkFFZ-jUjrStUQrWCG09IDmSDpDAbs"
+            },
+            {
+                name: "Men's Blue Shirt",
+                price: 999,
+                img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRynLTSaC0TeIzg-UdY6tYVRBbqoALkCwhyOtklEjHkT2WvbiZYX7YjwO02WeLP6QEQIK7wMUkz6OdvUe8YdNCZQNTzzJSjwJKXwfDeMLcHfU8X8mhnCXtCZa_DZIM0E5VCZfFO6g&usqp=CAc"
+            },
+            {
+                name: "Men's Denim Jeans",
+                price: 1499,
+                img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSpoe-yQIVUSICVvIXexnxfdwlucjyqdHdiiADAaR5B85BseqWnBzK9f4Fa3xTbxEawO46d8p3v05rCHGU7orFLvHhlBrmx_XO_ddxC2n_qkJ2T-GdFmhGU"
+            },
+            {
+                name: "Men's White Sneakers",
+                price: 1099,
+                img: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80"
+            },
+            {
+                name: "Men's Blue Formal",
+                price: 1099,
+                img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRBqv1L0W1GSZOIDz1m06Iu1XLJzEhwCRUqK4JbuiOMvksijN9k3LIB74bXma-DVqhNbjyoRIGfhvatKF_GNMaa60PjpiuKumk9NVZTC-ls1-Ut5yOvjDi7"
+            },
+            {
+                name: "Men's White Formal",
+                price: 1099,
+                img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSYTlg8WoSwxnGn4tDOPF2vXtMH4QI3SzRRjHm2MjW8EyA8PaIg5MmmkFhsMWmqBg7xAlzTZkLtC_ShiW93qdufir8ryrbY9vsHd8zeL3Xer5R-iFd87mxK9A&usqp=CAc"
+            },
+            {
+                name: "Men's green Formal",
+                price: 1099,
+                img: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRdC673SOa_ND8shHjiMMUN_IaFN-h3WZS1s4QNvbFMUnZBqvdxNPPbtiPQFI7OunUHZzp-KRGiEXkZsOWC5Tc0Bnvv6CsymbPAqd0_EviLfo7F8sqr9lg8gVuT_WcQlrsnonho3A&usqp=CAc"
+            },
+            {
+                name: "Men's Black Coaat",
+                price: 1099,
+                img: "data:image/webp;base64,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"
+            },
+        ];
+        function renderMenProducts() {
+            const list = document.getElementById('men-products');
+            list.innerHTML = '';
+            menProducts.forEach((prod, idx) => {
+                list.innerHTML += `
+                    <div class="product" data-index="${idx}">
+                        <img src="${prod.img}" alt="${prod.name}">
+                        <center>
+                            <h3>${prod.name}</h3>
+                            <div>Min 35% off</div>
+                            <div class="price">₹${prod.price}</div>
+                            <div class="btns">
+                                <button class="buy-btn">Buy Now</button>
+                                <button class="add-cart-btn">Add to Cart</button>
+                            </div>
+                        </center>
+                    </div>
+                `;
+            });
+        }
+        function addToCart(idx) {
+            const cart = JSON.parse(localStorage.getItem('cart') || "[]");
+            cart.push(menProducts[idx]);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(menProducts[idx].name + " added to cart!");
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMenProducts();
+            document.getElementById('men-products').addEventListener('click', function(e) {
+                if (e.target.classList.contains('add-cart-btn')) {
+                    const idx = e.target.closest('.product').dataset.index;
+                    addToCart(idx);
+                } else if (e.target.classList.contains('buy-btn')) {
+                    const idx = e.target.closest('.product').dataset.index;
+                    alert("This is a demo. Buy Now clicked for " + menProducts[idx].name);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

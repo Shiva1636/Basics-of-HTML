@@ -1,0 +1,239 @@
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 4px;
+    border: 2px solid #212121;
+    margin-left: 1rem;
+    padding: 2px 6px;
+}
+.search-container input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 0.4rem 0.5rem;
+    font-size: 1rem;
+    background: transparent;
+    width: 150px;
+}
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+}
+.search-btn svg {
+    display: block;
+}
+
+.main-hero {
+    width: 100%;
+    height: 240px;
+    background: linear-gradient(120deg, #f9d423 0%, #ff4e50 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px #333;
+    margin-bottom: 2rem;
+    border-radius: 0 0 32px 32px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.product {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    width: 250px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+.product:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    z-index: 2;
+}
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.product:hover img {
+    transform: scale(1.08) rotate(2deg);
+}
+.product h3 {
+    margin: 0.7rem 0 0.3rem 0;
+}
+.product .price {
+    color: #388e3c;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.product button {
+    background: #212121;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+.product button:hover {
+    background: #ffd600;
+    color: #212121;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product {
+        width: 90vw;
+    }
+    .main-hero {
+        font-size: 1.3rem;
+        height: 120px;
+    }
+    .search-container {
+        width: 90vw;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.header {
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: aliceblue;
+}
+
+input {
+    align-items: center;
+    margin-left: 50em;
+}
+
+
+.container {
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    margin: 5px;
+    background-color: beige;
+}
+
+.container1 {
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    margin: 5px;
+    background-color: bisque;
+}
+
+
+
+.product img {
+    width: 100%;
+    height: 250px;
+    
+    border-radius: 12px;
+}
+
+input {
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    border: 1px solid #2c4152;
+    border-radius: 17px;
+    /* width: 100%; */
+    padding: 0 20px 0 12px;
+    background-color: #fffded;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    height: 34px;
+    font-size: 14px;
+}
+
+body {
+
+    background-color: white;
+}
+
+footer {
+    border: 2px solid black;
+    width: 100%;
+    color: aliceblue;
+    background-color: black;
+}
+
+img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+
+
+.scrollBar {
+    display: flex;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+}
+.main-hero {
+  display: flex;
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

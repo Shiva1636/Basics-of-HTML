@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Page</title>
+    <link rel="stylesheet" href="ajio.css">
+</head>
+
+<body>
+
+    <!-- <section id="header">
+        <div class="header">
+            <div style="font-size: 25px; color: red;">AJIO</div>
+            <nav>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="men.html">Men</a></li>
+                    <li><a href="women.html">Women</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav> 
+            <div class="search-container">
+                <input type="text" placeholder="Search Here">
+                <button class="search-btn" aria-label="Search">
+                     SVG Search Icon 
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="9" cy="9" r="7" stroke="#333" stroke-width="2"/>
+                        <line x1="14.4142" y1="14.5858" x2="18" y2="18.1716" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section> -->
+    <section id="header">
+        <div class="header">
+            <div style="font-size: 25px; color: red;"><a href="ajio.html">AJIO</a></div>
+            <nav>
+                <ul id="navbar">
+                    <li><a href="ajio.html">Home</a></li>
+                    <li><a href="men1.html">Men</a></li>
+                    <li><a href="women1.html">Women</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="login.html">Sign In</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <main>
+        <div class="main-hero">
+            <h1>Discover the Latest Styles &amp; Deals!</h1>
+        </div>
+        <section class="ssc">
+            <div style="text-align: center; margin: 7px 8px -1px 7px;">
+                <h1>Featured Products</h1>
+            </div>
+            <div class="container" id="product-list">
+                <!-- Products will be rendered here by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <br><br>
+        <p style="height: 280px; width: auto; text-align: center;">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat asperiores dignissimos, rem voluptates
+            numquam reprehenderit ad quaerat at fugit autem eveniet illum sint labore amet maiores quos harum inventore,
+            quod a debitis? Veritatis quisquam, nulla reiciendis accusamus temporibus adipisci quo dolore eius et
+            voluptatum neque commodi excepturi possimus! Maxime sed unde labore, dolore incidunt expedita libero
+            assumenda recusandae sequi voluptates voluptatibus illum laudantium, fuga atque aliquid rerum inventore!
+
+        </p><br><br>
+        <center>
+
+            <p style="color: yellow;">&copy; Copy rights of Ajio</p>
+        </center>
+    </footer>
+
+    <script>
+        // Product data (use your provided image addresses, no repeats)
+        const products = [
+            {
+                name: "Women's Formal",
+                price: 200,
+                img: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRzwHGQP7vRd3cv8kvVkJWRewYt2aN1ftFnzbqC8pEL3eNCmdwcoN_PwbuKNCfjRo7XXhLNj-RBjoxs3E1d9mNvxf7rHmbjME33tjGg_iocZFpNIEE2r2wH"
+            },
+            {
+                name: "Black Coat",
+                price: 200,
+                img: "https://junglearth.com/cdn/shop/files/1615100511057.jpg?v=1686639857"
+            },
+            {
+                name: "Childern's dress",
+                price: 200,
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0cz5SGmmElpWd6milE7GsjWO-k1ozoCtr-Q&s"
+            },
+            {
+                name: "Formal dress",
+                price: 200,
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsgmc3K4Y2N66U9iFWolc0a3J92ZLKWizAPQ&s"
+            },
+            {
+                name: "Blue Formal",
+                price: 200,
+                img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTTmtMzakMhd4qoI_ZC6KEVoSAlCUzCLOu-pinaSuYoS329qh5lJQzLxP4T4SZT90vt09-JqMBKFKTMuIqJXkTYjPmMz1X1rA0memsnO4Q2ffoT7vjCqQhSUQ"
+            },
+            {
+                name: "Formal Dress's",
+                price: 200,
+                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5wreO5pxy3Ip1bZYVF0w3m1tbX2-T4Q-GCKBCngsaz1VmuK1zeK25qHZHtQs_r8n5Lkg&usqp=CAU"
+            },
+            {
+                name: "Cotton Cloth's",
+                price: 200,
+                img: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/40b96526388505.56354b599cc44.jpg"
+            },
+            {
+                name: "Denim Coat",
+                price: 200,
+                img: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/40b96526388505.56354b599cc44.jpg"
+            }
+        ];
+
+        // Render products
+        function renderProducts() {
+            const list = document.getElementById('product-list');
+            list.innerHTML = '';
+            products.forEach((prod, idx) => {
+                list.innerHTML += `
+                    <div class="product" data-index="${idx}">
+                        <img src="${prod.img}" alt="${prod.name}">
+                        <center>
+                            <h3>${prod.name}</h3>
+                            <div>Min 35% off</div>
+                            <div class="price">₹${prod.price}</div>
+                            <div class="btns">
+                                <button class="buy-btn">Buy Now</button>
+                                <button class="add-cart-btn">Add to Cart</button>
+                            </div>
+                        </center>
+                    </div>
+                `;
+            });
+        }
+
+        // Add to Cart logic
+        function addToCart(idx) {
+            const cart = JSON.parse(localStorage.getItem('cart') || "[]");
+            cart.push(products[idx]);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(products[idx].name + " added to cart!");
+        }
+
+        // Event delegation for buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            document.getElementById('product-list').addEventListener('click', function (e) {
+                if (e.target.classList.contains('add-cart-btn')) {
+                    const idx = e.target.closest('.product').dataset.index;
+                    addToCart(idx);
+                } else if (e.target.classList.contains('buy-btn')) {
+                    const idx = e.target.closest('.product').dataset.index;
+                    alert("This is a demo. Buy Now clicked for " + products[idx].name);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

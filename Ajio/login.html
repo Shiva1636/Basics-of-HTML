@@ -1,0 +1,169 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In Page</title>
+    <style>
+        .div {
+            /* width: auto;
+            height: 265px;
+            background-color: antiquewhite;
+            color: black;
+            padding: 5px; */
+            width: 505px;
+            height: 305px;
+            background-color: white;
+            color: black;
+            padding: 17px;
+            padding-top: 57px;
+            border: 2px solid black;
+
+        }
+        body{
+
+            background-color: bisque;
+        }
+
+        label {
+            display: inline-block;
+            width: 180px;
+            margin-bottom: 10px;
+        }
+
+        form {
+            width: 400px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Sign-In Here</h1>
+
+        <div class="div">
+            <form>
+                <label>Enter Your Name </label>
+                <input type="text" required><br>
+                <label>Enter Your Email</label>
+                <input type="email" required><br>
+                <label>Phone No: </label>
+                <input type="tel" required>
+            </form>
+        </div>
+    </center>
+    <center>
+        <button type="submit">Sign In</button>
+    </center>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Sign-In Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f9dcc4, #faedcd);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus {
+      border-color: #ffa500;
+      outline: none;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #ffa500;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e69500;
+    }
+ 
+  </style>
+</head>
+<body>
+  <div class="container">
+            <div class="header" style="margin-top: 25px;">
+            <div style="font-size: 25px; color: red;"><a href="ajio.html">AJIO</a></div>
+    <h1>Sign In</h1>
+    <form onsubmit="redirectToHome(event)">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+
+  <script>
+
+  function redirectToHome(event) {
+    event.preventDefault();
+    window.location.href = "ajio.html";
+  }
+  </script>
+</body>
+</html>
