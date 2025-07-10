@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #44f87ab4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    margin: 0 auto;
+    width: max-content;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #4ec6c4c7;
+    border: 2px solid #000;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: infinite;
+}
+
+#message {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cell.x::before {
+    content: "X";
+    color: #2196F3;
+}
+
+.cell.o::before {
+    content: "O";
+    color: #F44336;
+}
