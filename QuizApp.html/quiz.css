@@ -1,0 +1,153 @@
+h1{
+    text-align: center;
+    color: red;
+
+}
+
+ul {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li {
+    display: inline;
+    padding: 0px 20px;
+}
+#nav{
+    display: block;
+    unicode-bidi: isolate;
+    border: 1px solid black;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 25px;
+    margin-left: 5px;
+    background: navajowhite;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+  background: burlywood;
+  margin: 0;
+}
+h1 {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  color: #333;
+  letter-spacing: 1px;
+}
+#nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#nav li {
+  background: orange;
+  padding: 0.7em 2em;
+  border-radius: 8px;
+  font-size: 1.1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+#nav a {
+  text-decoration: none;
+  color: #212121;
+}
+#nav li:hover {
+  background: #ffd600;
+  color: #212121;
+  transform: scale(1.08);
+}
+.center-btns {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.main-btn {
+  background: #212121;
+  color: #fff;
+  padding: 1em 2.5em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.main-btn:hover {
+  background: #ffd600;
+  color: #212121;
+  transform: scale(1.05);
+}
+.quiz-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  background: navajowhite;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+.question {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.options label {
+  display: block;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  transition: background 0.2s;
+  background: #ffd600;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked + label {
+  background-color: #e0e0e0;
+}
+.correct {
+  background-color: green !important;
+  color: white;
+}
+.incorrect {
+  background-color: red !important;
+  color: white;
+}
+.timer {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #212121;
+}
+.stars {
+  font-size: 2em;
+  color: gold;
+  margin-bottom: 1em;
+}
+.hidden {
+  display: none;
+}
+button, .main-btn {
+  cursor: pointer;
+}
+#showResultBtn {
+  background: #388e3c;
+  color: #fff;
+  margin-top: 1.5em;
+  border: none;
+  padding: 0.7em 2em;
+  border-radius: 8px;
+  font-size: 1.1em;
+  transition: background 0.2s;
+}
+#showResultBtn:hover {
+  background: #ffd600;
+  color: #212121;
+}

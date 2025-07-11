@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="quiz.css" />
+</head>
+
+<body>
+    <div class="quiz-container">
+        <h2>Your Last Score: <span id="score"></span>/15</h2>
+        <div class="stars" id="stars"></div>
+        <h3>Top 5 Scores:</h3>
+        <ul id="leaderboard"></ul>
+    </div><br>
+    <a href="index.html" class="main-btn">Back to Home</a>
+    <script>
+        let highscores = JSON.parse(localStorage.getItem("scores")) || [];
+        let score = highscores.length > 0 ? highscores[0] : 0;
+        document.getElementById("score").innerText = score;
+        document.getElementById("stars").innerText =
+            "★".repeat(score >= 13 ? 5 : score >= 10 ? 4 : score >= 7 ? 3 : score >= 4 ? 2 : 1);
+        let list = "";
+        highscores.forEach((s, i) => list += `<li>${i + 1}. ${s}</li>`);
+        document.getElementById("leaderboard").innerHTML = list;
+    </script>
+</body>
+
+</html>
